@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: project007
+spec:
+  selector:
+    matchLabels:
+      app: project007
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: project007
+    spec:
+      containers:
+      - name: project007
+        image: sidartasilva/project007:latest
+
+
